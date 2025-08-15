@@ -1,0 +1,319 @@
+/* CycleCraft - Custom Styles */
+
+/* Hero Section */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="bike-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23bike-pattern)"/></svg>');
+  opacity: 0.3;
+}
+
+.bike-showcase {
+  position: relative;
+}
+
+.bike-circle {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-elements .floating-badge {
+  animation: bounce 2s infinite;
+}
+
+.floating-elements .floating-badge:nth-child(1) {
+  top: 20%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.floating-elements .floating-badge:nth-child(2) {
+  bottom: 30%;
+  left: 5%;
+  animation-delay: 1s;
+}
+
+.floating-elements .floating-badge:nth-child(3) {
+  top: 60%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+/* Product Cards */
+.product-card {
+  transition: all 0.3s ease;
+  border: none;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-overlay {
+  background: rgba(0,0,0,0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.bike-placeholder {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .bike-placeholder {
+  transform: scale(1.1);
+}
+
+/* Filter Buttons */
+.product-filters .btn {
+  margin: 0 5px 10px 0;
+  transition: all 0.3s ease;
+}
+
+.product-filters .btn.active {
+  background-color: var(--bs-primary);
+  color: white;
+  border-color: var(--bs-primary);
+}
+
+/* Service Cards */
+.service-card {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--bs-primary) !important;
+}
+
+.service-icon {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* About Section */
+.workshop-showcase {
+  position: relative;
+}
+
+.workshop-badges .badge:nth-child(1) {
+  top: 10%;
+  right: 20%;
+  animation: pulse 2s infinite;
+}
+
+.workshop-badges .badge:nth-child(2) {
+  bottom: 20%;
+  left: 10%;
+  animation: pulse 2s infinite;
+  animation-delay: 0.5s;
+}
+
+.workshop-badges .badge:nth-child(3) {
+  top: 70%;
+  right: 5%;
+  animation: pulse 2s infinite;
+  animation-delay: 1s;
+}
+
+/* Contact Form */
+.contact-form .form-control {
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Stats Section */
+.stats-section {
+  background: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Button Styles */
+.btn {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bike-circle {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .workshop-circle {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bike-circle {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .workshop-circle {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  
+  .floating-elements .floating-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Toast Notifications */
+.toast {
+  z-index: 1060;
+}
+
+/* Product Filter Animation */
+.product-item {
+  transition: all 0.5s ease;
+}
+
+.product-item.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+/* Header Enhancements */
+.header {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Footer Enhancements */
+.footer {
+  background: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* Interactive Elements */
+.interactive-element {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+  transform: scale(1.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+}

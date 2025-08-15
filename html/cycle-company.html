@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CycleCraft - Premium Bicycle Manufacturing</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg" />
+  <link rel="stylesheet" href="../assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/cycle-company.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
+    <div class="container">
+      <div class="header-wrapper d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <a href="cycle-company.html" class="logo-white">
+            <h3 class="text-white mb-0">🚴 CycleCraft</h3>
+          </a>
+          <a href="cycle-company.html" class="logo-dark">
+            <h3 class="text-dark mb-0">🚴 CycleCraft</h3>
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-4">
+              <div class="d-flex flex-column gap-6">
+                <div class="hstack justify-content-between border-bottom pb-6">
+                  <p class="mb-0 fs-5 text-dark">Menu</p>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li class="header-item">
+                      <a href="#home" class="header-link active hstack gap-2 fs-7 fw-bold text-dark">
+                        <iconify-icon icon="solar:home-2-bold" class="fs-6"></iconify-icon>Home</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="#products" class="header-link hstack gap-2 fs-7 fw-bold text-dark">
+                        <iconify-icon icon="solar:bicycle-bold" class="fs-6"></iconify-icon>Products</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="#about" class="header-link hstack gap-2 fs-7 fw-bold text-dark">
+                        <iconify-icon icon="solar:info-circle-bold" class="fs-6"></iconify-icon>About</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="#services" class="header-link hstack gap-2 fs-7 fw-bold text-dark">
+                        <iconify-icon icon="solar:settings-bold" class="fs-6"></iconify-icon>Services</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="#contact" class="header-link hstack gap-2 fs-7 fw-bold text-dark">
+                        <iconify-icon icon="solar:phone-bold" class="fs-6"></iconify-icon>Contact</a>
+                    </li>
+                  </ul>
+                  <div class="hstack gap-3">
+                    <button onclick="showQuoteModal()" class="btn btn-outline-primary fs-6 px-3 py-2 w-50">
+                      Get Quote
+                    </button>
+                    <button onclick="showCatalogModal()" class="btn btn-primary fs-6 px-3 py-2 w-50">
+                      View Catalog
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper overflow-hidden">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section position-relative d-flex align-items-center min-vh-100 bg-gradient-primary">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+              <h1 class="display-3 fw-bold text-white mb-4">Crafting Premium Bicycles Since 1985</h1>
+              <p class="fs-5 text-white text-opacity-90 mb-5">Experience the perfect blend of innovation, quality, and performance with our handcrafted bicycles designed for every adventure.</p>
+              <div class="d-flex gap-3 flex-wrap">
+                <button onclick="scrollToProducts()" class="btn btn-primary btn-lg px-4 py-3">
+                  <iconify-icon icon="solar:bicycle-bold" class="me-2"></iconify-icon>
+                  Explore Bikes
+                </button>
+                <button onclick="playVideoModal()" class="btn btn-outline-light btn-lg px-4 py-3">
+                  <iconify-icon icon="solar:play-bold" class="me-2"></iconify-icon>
+                  Watch Story
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image text-center" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+              <div class="bike-showcase position-relative">
+                <div class="bike-circle bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                  <iconify-icon icon="solar:bicycle-bold" class="text-white" style="font-size: 8rem;"></iconify-icon>
+                </div>
+                <div class="floating-elements">
+                  <div class="floating-badge badge bg-primary position-absolute">Premium Quality</div>
+                  <div class="floating-badge badge bg-success position-absolute">Eco-Friendly</div>
+                  <div class="floating-badge badge bg-warning position-absolute">Lifetime Warranty</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5 bg-dark">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-primary mb-2"><span class="count" data-target="50000">50,000</span>+</h3>
+              <p class="text-white text-opacity-75 mb-0">Happy Riders</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="text-primary mb-2"><span class="count" data-target="38">38</span></h3>
+              <p class="text-white text-opacity-75 mb-0">Years Experience</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="text-primary mb-2"><span class="count" data-target="150">150</span>+</h3>
+              <p class="text-white text-opacity-75 mb-0">Bike Models</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+              <h3 class="text-primary mb-2"><span class="count" data-target="25">25</span></h3>
+              <p class="text-white text-opacity-75 mb-0">Countries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section py-5 py-lg-11 bg-light-gray">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Our Bicycle Collection</h2>
+            <p class="fs-5 text-muted" data-aos="fade-up" data-aos-delay="100">From mountain adventures to city commutes, find your perfect ride</p>
+          </div>
+        </div>
+        
+        <!-- Product Filter Buttons -->
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="btn-group product-filters" role="group">
+            <button type="button" class="btn btn-outline-primary active" onclick="filterProducts('all')">All Bikes</button>
+            <button type="button" class="btn btn-outline-primary" onclick="filterProducts('mountain')">Mountain</button>
+            <button type="button" class="btn btn-outline-primary" onclick="filterProducts('road')">Road</button>
+            <button type="button" class="btn btn-outline-primary" onclick="filterProducts('electric')">Electric</button>
+            <button type="button" class="btn btn-outline-primary" onclick="filterProducts('hybrid')">Hybrid</button>
+          </div>
+        </div>
+
+        <div class="row" id="products-grid">
+          <!-- Mountain Bikes -->
+          <div class="col-lg-4 col-md-6 mb-4 product-item mountain" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card card h-100 shadow-sm">
+              <div class="product-image position-relative overflow-hidden">
+                <div class="bike-placeholder bg-primary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 250px;">
+                  <iconify-icon icon="solar:bicycle-bold" class="text-primary" style="font-size: 4rem;"></iconify-icon>
+                </div>
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                  <button onclick="showProductDetails('mountain-pro')" class="btn btn-primary">
+                    <iconify-icon icon="solar:eye-bold" class="me-2"></iconify-icon>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Mountain Pro X1</h5>
+                <p class="card-text text-muted">Professional mountain bike for extreme terrains</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-primary mb-0">Rs. 214414</span>
+                  <button onclick="addToCart('mountain-pro')" class="btn btn-outline-primary btn-sm">
+                    <iconify-icon icon="solar:cart-plus-bold"></iconify-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Road Bikes -->
+          <div class="col-lg-4 col-md-6 mb-4 product-item road" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card card h-100 shadow-sm">
+              <div class="product-image position-relative overflow-hidden">
+                <div class="bike-placeholder bg-success bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 250px;">
+                  <iconify-icon icon="solar:bicycle-bold" class="text-success" style="font-size: 4rem;"></iconify-icon>
+                </div>
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                  <button onclick="showProductDetails('road-racer')" class="btn btn-success">
+                    <iconify-icon icon="solar:eye-bold" class="me-2"></iconify-icon>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Road Racer Elite</h5>
+                <p class="card-text text-muted">Lightweight carbon fiber road bike for speed</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-success mb-0">Rs. 283714</span>
+                  <button onclick="addToCart('road-racer')" class="btn btn-outline-success btn-sm">
+                    <iconify-icon icon="solar:cart-plus-bold"></iconify-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electric Bikes -->
+          <div class="col-lg-4 col-md-6 mb-4 product-item electric" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-card card h-100 shadow-sm">
+              <div class="product-image position-relative overflow-hidden">
+                <div class="bike-placeholder bg-warning bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 250px;">
+                  <iconify-icon icon="solar:bicycle-bold" class="text-warning" style="font-size: 4rem;"></iconify-icon>
+                </div>
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                  <button onclick="showProductDetails('e-bike-city')" class="btn btn-warning">
+                    <iconify-icon icon="solar:eye-bold" class="me-2"></iconify-icon>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">E-Bike City Cruiser</h5>
+                <p class="card-text text-muted">Electric bike perfect for urban commuting</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-warning mb-0">Rs.108000</span>
+                  <button onclick="addToCart('e-bike-city')" class="btn btn-outline-warning btn-sm">
+                    <iconify-icon icon="solar:cart-plus-bold"></iconify-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <button onclick="showAllProducts()" class="btn btn-primary btn-lg">
+            <iconify-icon icon="solar:bicycle-bold" class="me-2"></iconify-icon>
+            View All Products
+          </button>
+        </div>
+      </div>
+    </section> 
+   <!-- About Section -->
+    <section id="about" class="about-section py-5 py-lg-11">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-content" data-aos="fade-right">
+              <h2 class="display-4 fw-bold mb-4">Crafting Excellence Since 1985</h2>
+              <p class="fs-5 text-muted mb-4">At CycleCraft, we believe every bicycle tells a story. Our journey began with a simple mission: to create bicycles that don't just transport you, but inspire your adventures.</p>
+              
+              <div class="features-list mb-4">
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="feature-icon bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                    <iconify-icon icon="solar:shield-check-bold" class="text-primary fs-5"></iconify-icon>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Premium Materials</h6>
+                    <p class="text-muted mb-0 small">High-grade aluminum and carbon fiber construction</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="feature-icon bg-success bg-opacity-10 rounded-circle p-3 me-3">
+                    <iconify-icon icon="solar:leaf-bold" class="text-success fs-5"></iconify-icon>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Eco-Friendly</h6>
+                    <p class="text-muted mb-0 small">Sustainable manufacturing with recycled materials</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="feature-icon bg-warning bg-opacity-10 rounded-circle p-3 me-3">
+                    <iconify-icon icon="solar:settings-bold" class="text-warning fs-5"></iconify-icon>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Custom Design</h6>
+                    <p class="text-muted mb-0 small">Personalized bikes tailored to your needs</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="d-flex gap-3">
+                <button onclick="showCompanyHistory()" class="btn btn-primary">
+                  <iconify-icon icon="solar:history-bold" class="me-2"></iconify-icon>
+                  Our Story
+                </button>
+                <button onclick="showCertifications()" class="btn btn-outline-primary">
+                  <iconify-icon icon="solar:medal-star-bold" class="me-2"></iconify-icon>
+                  Certifications
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-image text-center" data-aos="fade-left">
+              <div class="workshop-showcase position-relative">
+                <div class="workshop-circle bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 400px; height: 400px;">
+                  <iconify-icon icon="solar:hammer-bold" class="text-primary" style="font-size: 6rem;"></iconify-icon>
+                </div>
+                <div class="workshop-badges">
+                  <div class="badge bg-primary position-absolute">38+ Years</div>
+                  <div class="badge bg-success position-absolute">ISO Certified</div>
+                  <div class="badge bg-warning position-absolute">Award Winner</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5 py-lg-11 bg-dark">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-4 fw-bold text-white mb-4" data-aos="fade-up">Our Services</h2>
+            <p class="fs-5 text-white text-opacity-75" data-aos="fade-up" data-aos-delay="100">Complete bicycle solutions from design to maintenance</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card card bg-transparent border-light h-100" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-body text-center p-4">
+                <div class="service-icon bg-primary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                  <iconify-icon icon="solar:settings-bold" class="text-primary fs-3"></iconify-icon>
+                </div>
+                <h5 class="text-white mb-3">Custom Manufacturing</h5>
+                <p class="text-white text-opacity-75 mb-4">Bespoke bicycles designed and built to your exact specifications and riding style.</p>
+                <button onclick="requestCustomQuote()" class="btn btn-outline-primary">
+                  Get Custom Quote
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card card bg-transparent border-light h-100" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-body text-center p-4">
+                <div class="service-icon bg-success bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                  <iconify-icon icon="solar:wrench-bold" class="text-success fs-3"></iconify-icon>
+                </div>
+                <h5 class="text-white mb-3">Maintenance & Repair</h5>
+                <p class="text-white text-opacity-75 mb-4">Professional servicing to keep your bike in perfect condition with genuine parts.</p>
+                <button onclick="bookService()" class="btn btn-outline-success">
+                  Book Service
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card card bg-transparent border-light h-100" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-body text-center p-4">
+                <div class="service-icon bg-warning bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                  <iconify-icon icon="solar:delivery-bold" class="text-warning fs-3"></iconify-icon>
+                </div>
+                <h5 class="text-white mb-3">Global Shipping</h5>
+                <p class="text-white text-opacity-75 mb-4">Worldwide delivery with secure packaging and tracking for your peace of mind.</p>
+                <button onclick="checkShipping()" class="btn btn-outline-warning">
+                  Check Shipping
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 py-lg-11 bg-light-gray">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">What Our Riders Say</h2>
+            <p class="fs-5 text-muted" data-aos="fade-up" data-aos-delay="100">Real experiences from our satisfied customers</p>
+          </div>
+        </div>
+        
+        <div class="testimonials-slider">
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="testimonial-card card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-body p-4">
+                  <div class="stars mb-3">
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                  </div>
+                  <p class="mb-4">"My CycleCraft mountain bike has been my companion on countless adventures. The build quality is exceptional!"</p>
+                  <div class="d-flex align-items-center">
+                    <div class="avatar bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                      <span class="text-white fw-bold">JS</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Vishal Ahuja</h6>
+                      <small class="text-muted">Mountain Biker</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+              <div class="testimonial-card card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-body p-4">
+                  <div class="stars mb-3">
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                  </div>
+                  <p class="mb-4">"The electric bike has transformed my daily commute. Smooth, efficient, and environmentally friendly!"</p>
+                  <div class="d-flex align-items-center">
+                    <div class="avatar bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                      <span class="text-white fw-bold">MJ</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Nitu kaushik</h6>
+                      <small class="text-muted">Daily Commuter</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+              <div class="testimonial-card card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-body p-4">
+                  <div class="stars mb-3">
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                    <iconify-icon icon="solar:star-bold" class="text-warning"></iconify-icon>
+                  </div>
+                  <p class="mb-4">"Professional racing performance with unmatched comfort. CycleCraft delivers on every promise!"</p>
+                  <div class="d-flex align-items-center">
+                    <div class="avatar bg-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                      <span class="text-dark fw-bold">DL</span>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Arjun Arora</h6>
+                      <small class="text-muted">Professional Cyclist</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5 py-lg-11">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="contact-info" data-aos="fade-right">
+              <h2 class="display-4 fw-bold mb-4">Get In Touch</h2>
+              <p class="fs-5 text-muted mb-5">Ready to find your perfect bike? Contact our experts for personalized recommendations.</p>
+              
+              <div class="contact-methods">
+                <div class="contact-item d-flex align-items-center mb-4">
+                  <div class="contact-icon bg-primary bg-opacity-10 rounded-circle p-3 me-4">
+                    <iconify-icon icon="solar:phone-bold" class="text-primary fs-5"></iconify-icon>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Phone</h6>
+                    <a href="tel:+9569186816" class="text-decoration-none">+91 9569186816</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item d-flex align-items-center mb-4">
+                  <div class="contact-icon bg-success bg-opacity-10 rounded-circle p-3 me-4">
+                    <iconify-icon icon="solar:letter-bold" class="text-success fs-5"></iconify-icon>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Email</h6>
+                    <a href="mailto:info@cyclecraft.com" class="text-decoration-none">info@cyclecraft.com</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item d-flex align-items-center mb-4">
+                  <div class="contact-icon bg-warning bg-opacity-10 rounded-circle p-3 me-4">
+                    <iconify-icon icon="solar:map-point-bold" class="text-warning fs-5"></iconify-icon>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Address</h6>
+                    <p class="mb-0 text-muted">kankarkheda, meerut, U.P , pin-250001</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="social-links d-flex gap-3 mt-4">
+                <button onclick="openSocial('facebook')" class="btn btn-outline-primary rounded-circle p-2">
+                  <iconify-icon icon="solar:facebook-bold"></iconify-icon>
+                </button>
+                <button onclick="openSocial('instagram')" class="btn btn-outline-primary rounded-circle p-2">
+                  <iconify-icon icon="solar:instagram-bold"></iconify-icon>
+                </button>
+                <button onclick="openSocial('twitter')" class="btn btn-outline-primary rounded-circle p-2">
+                  <iconify-icon icon="solar:twitter-bold"></iconify-icon>
+                </button>
+                <button onclick="openSocial('youtube')" class="btn btn-outline-primary rounded-circle p-2">
+                  <iconify-icon icon="solar:youtube-bold"></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="contact-form" data-aos="fade-left">
+              <form class="card shadow-sm p-4" onsubmit="submitContactForm(event)">
+                <h4 class="mb-4">Send us a message</h4>
+                
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone (Optional)</label>
+                  <input type="tel" class="form-control" id="phone">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="interest" class="form-label">I'm interested in</label>
+                  <select class="form-select" id="interest" required>
+                    <option value="">Select an option</option>
+                    <option value="mountain">Mountain Bikes</option>
+                    <option value="road">Road Bikes</option>
+                    <option value="electric">Electric Bikes</option>
+                    <option value="hybrid">Hybrid Bikes</option>
+                    <option value="custom">Custom Build</option>
+                    <option value="service">Service & Repair</option>
+                  </select>
+                </div>
+                
+                <div class="mb-4">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100">
+                  <iconify-icon icon="solar:letter-bold" class="me-2"></iconify-icon>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="text-white mb-4">🚴 CycleCraft</h4>
+            <p class="text-white text-opacity-75 mb-4">Crafting premium bicycles since 1985. Your adventure starts here.</p>
+            <div class="social-links d-flex gap-3">
+              <button onclick="openSocial('facebook')" class="btn btn-outline-light rounded-circle p-2">
+                <iconify-icon icon="solar:facebook-bold"></iconify-icon>
+              </button>
+              <button onclick="openSocial('instagram')" class="btn btn-outline-light rounded-circle p-2">
+                <iconify-icon icon="solar:instagram-bold"></iconify-icon>
+              </button>
+              <button onclick="openSocial('twitter')" class="btn btn-outline-light rounded-circle p-2">
+                <iconify-icon icon="solar:twitter-bold"></iconify-icon>
+              </button>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-white mb-3">Products</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" onclick="filterProducts('mountain')" class="text-white text-opacity-75 text-decoration-none">Mountain Bikes</a></li>
+              <li><a href="#" onclick="filterProducts('road')" class="text-white text-opacity-75 text-decoration-none">Road Bikes</a></li>
+              <li><a href="#" onclick="filterProducts('electric')" class="text-white text-opacity-75 text-decoration-none">Electric Bikes</a></li>
+              <li><a href="#" onclick="filterProducts('hybrid')" class="text-white text-opacity-75 text-decoration-none">Hybrid Bikes</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-white mb-3">Services</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" onclick="requestCustomQuote()" class="text-white text-opacity-75 text-decoration-none">Custom Build</a></li>
+              <li><a href="#" onclick="bookService()" class="text-white text-opacity-75 text-decoration-none">Maintenance</a></li>
+              <li><a href="#" onclick="checkShipping()" class="text-white text-opacity-75 text-decoration-none">Shipping</a></li>
+              <li><a href="#" onclick="showWarranty()" class="text-white text-opacity-75 text-decoration-none">Warranty</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-white mb-3">Company</h6>
+            <ul class="list-unstyled">
+              <li><a href="#about" class="text-white text-opacity-75 text-decoration-none">About Us</a></li>
+              <li><a href="#" onclick="showCareers()" class="text-white text-opacity-75 text-decoration-none">Careers</a></li>
+              <li><a href="#" onclick="showPress()" class="text-white text-opacity-75 text-decoration-none">Press</a></li>
+              <li><a href="#contact" class="text-white text-opacity-75 text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h6 class="text-white mb-3">Support</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" onclick="showFAQ()" class="text-white text-opacity-75 text-decoration-none">FAQ</a></li>
+              <li><a href="#" onclick="showSupport()" class="text-white text-opacity-75 text-decoration-none">Help Center</a></li>
+              <li><a href="#" onclick="showReturns()" class="text-white text-opacity-75 text-decoration-none">Returns</a></li>
+              <li><a href="#" onclick="showPrivacy()" class="text-white text-opacity-75 text-decoration-none">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <hr class="border-light border-opacity-25 my-4">
+        
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="text-white text-opacity-75 mb-0">&copy; 2025 CycleCraft. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <button onclick="scrollToTop()" class="btn btn-primary rounded-circle p-2">
+              <iconify-icon icon="solar:arrow-up-bold"></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Modals and Interactive Elements -->
+  <div id="notification-toast" class="toast position-fixed bottom-0 end-0 m-3" role="alert">
+    <div class="toast-header">
+      <iconify-icon icon="solar:check-circle-bold" class="text-success me-2"></iconify-icon>
+      <strong class="me-auto">CycleCraft</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body" id="toast-message">
+      Action completed successfully!
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="../assets/libs/aos-master/dist/aos.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/cycle-company.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
